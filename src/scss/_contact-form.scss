@@ -1,0 +1,108 @@
+.contact-form {
+  $self: &;
+  width: 100%;
+  &__item {
+    margin: 2.5rem 0;
+    position: relative;
+    width: 100%;
+    &--inline-block {
+      display: inline-block;
+      width: 49%;
+
+      @include md-max-width {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    & > * {
+      outline: none;
+      transition: border 250ms ease;
+
+      &:focus {
+        border: 3px solid $accent;
+      }
+    }
+  }
+
+  &__label-input-text {
+    font-size: 1.1rem;
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 5%;
+    color: #000;
+    transition: transform 250ms ease, font-size 250ms ease, color 250ms ease;
+  }
+
+  &__input-text {
+    background: #f4eaff;
+    border: 3px solid #2b0554;
+    border-radius: 15px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    @include custom-vh(8);
+    width: 100%;
+    padding: 0 5%;
+
+    &.float-label + #{$self}__label-input-text {
+      font-size: 0.9rem;
+      color: $accent;
+      transform: translate(-10px, -200%);
+    }
+  }
+
+  &__label-textarea {
+    font-size: 1.1rem;
+    display: block;
+    position: absolute;
+    top: 12%;
+    left: 3%;
+    color: #000;
+    transition: transform 250ms ease, font-size 250ms ease, color 250ms ease;
+  }
+
+  &__textarea {
+    background: #f4eaff;
+    font-size: 1.1rem;
+    padding: custom-vh(4.5) 2.5vw;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 15px;
+    border: 3px solid #2b0554;
+    @include custom-vh(40);
+    width: 100%;
+    resize: none;
+    overflow: hidden;
+
+    &.float-label + #{$self}__label-textarea {
+      font-size: 0.9rem;
+      color: $accent;
+      transform: translate(-10px, -350%);
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    font-size: 1.1rem;
+    background: #2b0554;
+    border: none;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    height: 3.5rem;
+    width: 10rem;
+    border-radius: 50px;
+    outline: none;
+    margin: 2rem 0;
+    transition: transform 250ms ease, box-shadow 250ms ease;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      box-shadow: 0 5px 9px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+      transform: translateY(4px);
+    }
+  }
+}

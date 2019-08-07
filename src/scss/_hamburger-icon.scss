@@ -1,0 +1,57 @@
+.hamburger-icon {
+  cursor: pointer;
+  background: #2b0554;
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  z-index: 3;
+  border-radius: 50%;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 500ms transform ease, opacity 500ms ease;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  span {
+    transition: 500ms transform;
+    background: $accent;
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+
+    &:nth-child(1) {
+      transform: translateY(-5px);
+    }
+    &:nth-child(1) {
+      opacity: 1;
+    }
+    &:nth-child(3) {
+      transform: translateY(5px);
+    }
+  }
+
+  &.open {
+    transform: rotate(45deg);
+    &:hover {
+      transform: scale(1.2) rotate(45deg);
+    }
+    span {
+      &:nth-child(1) {
+        transform: translate(0px, 100%);
+      }
+      &:nth-child(3) {
+        transform: rotate(90deg) translate(-10%, 0px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+    }
+  }
+}
