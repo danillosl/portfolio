@@ -34,4 +34,5 @@ function watchDist() {
   });
 }
 exports.default = gulp.series(style, watch);
-exports.build = gulp.series(style, copyToDist, watchDist);
+exports.build = gulp.series(style, copyToDist);
+exports.watchDist = gulp.series(style, copyToDist, watchDist);

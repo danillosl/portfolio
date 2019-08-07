@@ -1,14 +1,15 @@
 {
-  "name": "html5-sass-gulp-boilerplate",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "A html5, sass, gulp boilerplate with live reload.",
+  "description": "A pure html5 and css3 portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "deploy": "gulp build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danillosl/html5-sass-gulp-boilerplate.git"
+    "url": "git+https://github.com/danillosl/portfolio.git"
   },
   "keywords": [
     "html",
@@ -25,11 +26,13 @@
   "bugs": {
     "url": "https://github.com/danillosl/html5-sass-gulp-boilerplate/issues"
   },
-  "homepage": "https://github.com/danillosl/html5-sass-gulp-boilerplate#readme",
+  "homepage": "https://danillosl.github.io/portfolio",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
-  }
+    "gulp-sass": "^4.0.2",
+    "gh-pages": "^2.0.1"
+  },
+  "dependencies": {}
 }
