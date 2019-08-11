@@ -1,3 +1,12 @@
+// // fix preload animation problem.
+window.addEventListener(
+  "load",
+  evt => {
+    document.querySelector("body").classList.toggle("preload");
+  },
+  false
+);
+
 const staticHeight = () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);

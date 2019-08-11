@@ -77,6 +77,14 @@ $screen-xl: 1200px;
   box-sizing: border-box;
 }
 
+// fix preload animation problem.
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 @import "./nav";
 @import "./hamburger-icon";
 @import "./contact-form";
