@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box; }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important; }
+
 .main-nav {
   position: fixed;
   width: 100vw;
